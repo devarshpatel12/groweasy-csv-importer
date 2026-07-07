@@ -1,0 +1,6 @@
+id,created_time,full_name,email,phone_number,company_name,city,state,country,lead_status,platform,notes
+1,2026-05-13 14:20:48,John Doe,john.doe@example.com,+919876543210,GrowEasy,Mumbai,Maharashtra,India,Interested,Facebook Lead Ads,Client wants demo reschedule
+2,2026-05-13 14:25:30,Sarah Johnson,sarah.j@example.com,9876543211,Tech Solutions,Bangalore,Karnataka,India,No Answer,Google Ads,Busy - call next week
+3,2026-05-13 14:30:15,Rajesh Patel,,9123456789,Startup Inc,Delhi,Delhi,India,Not Interested,meridian_tower campaign,Wrong number possibly
+4,2026-05-13 14:35:22,Priya Singh,priya.singh@example.com,+91 9876543213,Enterprise Corp,Pune,Maharashtra,India,Closed Won,eden_park,Deal closed - onboarding
+5,2026-05-13 15:00:00,Anonymous Lead,,,,,,,New,,No contact info - should skip

@@ -1,0 +1,16 @@
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+      - "4000:4000"
+    environment:
+      - PORT=4000
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - OPENAI_MODEL=${OPENAI_MODEL:-gpt-4o-mini}
+      - BATCH_SIZE=${BATCH_SIZE:-15}
+      - MAX_RETRIES=${MAX_RETRIES:-3}
+      - CORS_ORIGIN=http://localhost:3000
+      - NEXT_PUBLIC_API_URL=http://localhost:4000
+    env_file:
+      - .env
