@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: groweasy-csv-importer-backend
+    runtime: node
+    rootDir: backend
+    plan: starter
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: PORT
+        value: 4000
+      - key: OPENAI_MODEL
+        value: gpt-4o-mini
+      - key: OPENAI_FALLBACK_MODE
+        value: "true"
+      - key: BATCH_SIZE
+        value: 15
+      - key: MAX_RETRIES
+        value: 3
+      - key: DATABASE_PATH
+        value: ./database.db
+      - key: CORS_ORIGIN
+        value: https://REPLACE_WITH_FRONTEND_URL.vercel.app
+      - key: OPENAI_API_KEY
+        sync: false

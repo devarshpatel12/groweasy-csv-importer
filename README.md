@@ -11,8 +11,8 @@ AI-powered CSV importer that intelligently extracts CRM lead information from **
 
 ## Demo
 
-- **Live App:** _Deploy to Vercel + Railway and add URL here_
-- **Repository:** _Add your GitHub URL here_
+- **Live App:** _Deploy to Vercel + Render and add URL here_
+- **Repository:** https://github.com/devarshpatel12/groweasy-csv-importer
 
 ## Features
 
@@ -173,14 +173,21 @@ docker compose up --build
 
 ## Deployment
 
-### Frontend (Vercel)
-1. Import repo, set root to `frontend`
-2. Set `NEXT_PUBLIC_API_URL` to your backend URL
+### Backend (Render)
+1. In Render, choose **New +** → **Blueprint**.
+2. Select this GitHub repository.
+3. Render will detect `render.yaml` and create `groweasy-csv-importer-backend`.
+4. In the service environment, set:
+  - `OPENAI_API_KEY` (recommended for AI extraction)
+  - `CORS_ORIGIN` to your Vercel frontend URL
+5. Deploy and copy the backend URL (example: `https://groweasy-csv-importer-backend.onrender.com`).
 
-### Backend (Railway / Render)
-1. Deploy `backend` directory
-2. Set environment variables from `.env.example`
-3. Update `CORS_ORIGIN` to your Vercel URL
+### Frontend (Vercel)
+1. Login once locally: `vercel login`
+2. Deploy frontend from this repo: `vercel --cwd frontend --prod`
+3. In Vercel Project Settings → Environment Variables, set:
+  - `NEXT_PUBLIC_API_URL=https://<your-render-backend>.onrender.com`
+4. Redeploy after setting the environment variable.
 
 ## Project Structure
 
