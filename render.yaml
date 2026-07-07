@@ -23,6 +23,6 @@ services:
       - key: DATABASE_PATH
         value: ./database.db
       - key: CORS_ORIGIN
-        value: https://REPLACE_WITH_FRONTEND_URL.vercel.app
+        value: https://frontend-psi-teal-13.vercel.app
       - key: OPENAI_API_KEY
         sync: false
