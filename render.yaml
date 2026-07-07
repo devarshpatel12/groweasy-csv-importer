@@ -3,7 +3,7 @@ services:
     name: groweasy-csv-importer-backend
     runtime: node
     rootDir: backend
-    plan: starter
+    plan: free
     buildCommand: npm install && npm run build
     startCommand: npm run start
     healthCheckPath: /api/health
