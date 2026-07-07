@@ -11,7 +11,8 @@ AI-powered CSV importer that intelligently extracts CRM lead information from **
 
 ## Demo
 
-- **Live App:** _Deploy to Vercel + Render and add URL here_
+- **Live App:** https://frontend-psi-teal-13.vercel.app
+- **Backend API:** https://groweasy-csv-importer-backend-9nu1.onrender.com
 - **Repository:** https://github.com/devarshpatel12/groweasy-csv-importer
 
 ## Features
